@@ -108,3 +108,50 @@
   .movie-card.animated {
   animation: fadeIn 0.5s;
   }
+
+  /*  les styles pour MovieDescription */
+.movie-description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+  display: inline-block;
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.movie-description h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.movie-description p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.trailer a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.trailer a:hover {
+  background-color: #0056b3;
+}

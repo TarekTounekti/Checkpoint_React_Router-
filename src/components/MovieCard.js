@@ -1,19 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MovieCard = ({ movie, onDeleteMovie }) => {
-  // Fonction qui gère la suppression d'un film
   const handleDelete = () => {
-    onDeleteMovie(movie.id); // Appelle la fonction onDeleteMovie avec l'ID du film en paramètre
+    onDeleteMovie(movie.id);
   };
 
   return (
-    <div className="movie-card">
-      <img src={movie.image} alt="Movie" className="movie-image" /> {/* Affiche l'image du film */}
-      <h3>{movie.title}</h3> {/* Affiche le titre du film */}
-      <p>{movie.description}</p> {/* Affiche la description du film */}
-      <p>Rating: {movie.rating}</p> {/* Affiche la note du film */}
-      <button onClick={handleDelete} className="btn btn-danger">Delete</button> {/* Bouton "Delete" qui appelle la fonction handleDelete lorsqu'il est cliqué */}
-    </div>
+    <Link to={`/movies/${movie.id}`} className="movie-card-link">
+      <div className="movie-card">
+        <img src={movie.image} alt="Movie" className="movie-image" />
+        <h3>{movie.title}</h3>
+        <p>{movie.description}</p>
+        <p>Rating: {movie.rating}</p>
+        <button onClick={handleDelete} className="btn btn-danger">
+          Delete
+        </button>
+      </div>
+    </Link>
   );
 };
 
